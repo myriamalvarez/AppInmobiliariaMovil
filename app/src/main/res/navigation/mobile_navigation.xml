@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inicio">
+
+    <fragment
+        android:id="@+id/nav_inicio"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.inicio.InicioFragment"
+        android:label="@string/menu_inicio"
+        tools:layout="@layout/fragment_inicio" />
+
+    <fragment
+        android:id="@+id/nav_perfil"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.perfil.PerfilFragment"
+        android:label="@string/menu_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/nav_inmuebles"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.inmuebles.InmueblesFragment"
+        android:label="@string/menu_inmuebles"
+        tools:layout="@layout/fragment_inmuebles" />
+    <fragment
+        android:id="@+id/nav_inquilinos"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.inquilinos.InquilinosFragment"
+        android:label="@string/menu_inquilinos"
+        tools:layout="@layout/fragment_inquilinos" />
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.contratos.ContratosFragment"
+        android:label="@string/menu_salir"
+        tools:layout="@layout/fragment_salir" />
+
+    <fragment
+        android:id="@+id/nav_salir"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.salir.SalirFragment"
+        android:label="@string/menu_salir"
+        tools:layout="@layout/fragment_salir" />
+</navigation>
