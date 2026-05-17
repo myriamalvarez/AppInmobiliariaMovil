@@ -5,7 +5,10 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.myrsoft.appinmobiliariamovil.modelo.Inmueble;
 import com.myrsoft.appinmobiliariamovil.modelo.Propietario;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -40,6 +43,18 @@ public class ApiClient {
 
         @PUT("api/Propietarios/actualizar")
         Call<Propietario> actualizarProp(@Header("Authorization") String token, @Body Propietario p);
+
+        @FormUrlEncoded
+        @PUT("api/Propietarios/changePassword")
+        Call<Void> cambiarPassword(@Header("Authorization") String token,@Field("currentPassword") String actual, @Field("newPassword") String nueva);
+
+        @FormUrlEncoded
+        @POST("api/Propietarios/email")
+        Call<String> resetearContrasena(@Field("email") String email);
+
+        @GET("api/Auth/Inmuebles")
+        Call<List<Inmueble>> listarInmuebles(@Header("Authorization") String token);
+
     }
     public static void guardarToken(Context context, String token) {
         SharedPreferences sp = context.getSharedPreferences("token.xml", Context.MODE_PRIVATE);

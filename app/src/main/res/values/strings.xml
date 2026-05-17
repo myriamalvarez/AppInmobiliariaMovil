@@ -14,4 +14,137 @@
     <string name="menu_inquilinos">Inquilinos</string>
     <string name="menu_contratos">Contratos</string>
     <string name="menu_salir">Salir</string>
+
+    <!-- Pantalla de Login -->
+    <string name="app_name_short">Inmobiliaria La Punta</string>
+    <string name="hint_usuario">Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="logo_inmobiliaria">Logo de la inmobiliaria</string>
+
+    <!-- Información de la Inmobiliaria -->
+    <string name="nombre_inmobiliaria">Inmobiliaria La Punta</string>
+    <string name="eslogan_inmobiliaria">Tu hogar, nuestra pasión</string>
+
+    <!-- Información de Contacto -->
+    <string name="titulo_contacto">Información de Contacto</string>
+    <string name="direccion_inmobiliaria">Av. Principal 123, La Punta, San Luis</string>
+    <string name="telefono_inmobiliaria">📞 (0266) 123-4567</string>
+    <string name="email_inmobiliaria">✉️ contacto@inmobiliarialapunta.com</string>
+    <string name="horario_inmobiliaria">🕒 Lun - Vie: 9:00 - 18:00 | Sáb: 9:00 - 13:00</string>
+
+    <!-- Descripciones para accesibilidad -->
+    <string name="descripcion_mapa">Mapa mostrando la ubicación de la inmobiliaria</string>
+    <string name="icono_direccion">Ícono de ubicación</string>
+    <string name="icono_telefono">Ícono de teléfono</string>
+    <string name="icono_email">Ícono de email</string>
+    <string name="icono_horario">Ícono de horario</string>
+
+    <!-- Fragment Perfil -->
+    <string name="titulo_perfil">Perfil</string>
+    <string name="nombre_propietario">Luis Mercado</string>
+    <string name="foto_perfil">Foto de perfil</string>
+    <string name="label_codigo">Código</string>
+    <string name="label_dni">DNI</string>
+    <string name="label_nombre">Nombre</string>
+    <string name="label_apellido">Apellido</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_password">Contraseña</string>
+    <string name="label_telefono">Teléfono</string>
+    <string name="btn_editar">EDITAR</string>
+    <string name="btn_guardar">GUARDAR</string>
+
+    <!-- Cambiar contraseña -->
+    <string name="titulo_cambiar_password">Cambiar Contraseña</string>
+    <string name="subtitulo_cambiar_password">Ingresa tu contraseña actual y elige una nueva</string>
+    <string name="label_password_actual">Contraseña Actual</string>
+    <string name="label_password_nueva">Nueva Contraseña</string>
+    <string name="label_confirmar_password">Confirmar Contraseña</string>
+    <string name="hint_password_actual">Ingresa tu contraseña actual</string>
+    <string name="hint_password_nueva">Ingresa tu nueva contraseña</string>
+    <string name="hint_confirmar_password">Confirma tu nueva contraseña</string>
+    <string name="helper_password">Mínimo 6 caracteres</string>
+    <string name="btn_cambiar_password">CAMBIAR CONTRASEÑA</string>
+    <string name="icono_cambiar_password">Icono de candado</string>
+    <string name="btn_cambiar_password_short">Cambiar Contraseña</string>
+    <string name="icono_password">Icono de contraseña</string>
+
+    <!-- Mensajes de validación -->
+    <string name="error_password_vacia">La contraseña no puede estar vacía</string>
+    <string name="error_password_corta">La contraseña debe tener al menos 6 caracteres</string>
+    <string name="error_passwords_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="error_password_actual_incorrecta">La contraseña actual es incorrecta</string>
+    <string name="exito_password_cambiada">Contraseña cambiada correctamente</string>
+
+    <!-- Inmuebles -->
+    <string name="icono_inmueble">Icono de inmueble</string>
+    <string name="preview_foto">Vista previa de la foto</string>
+    <string name="icono_camara">Icono de cámara</string>
+    <string name="placeholder_casa">Imagen placeholder de casa</string>
+    <string name="agregar_inmueble">Agregar inmueble</string>
+    <string name="imagen_inmueble">Imagen del inmueble</string>
+    <string name="sin_inmuebles">Sin inmuebles</string>
+    <string name="sin_inmuebles_mensaje">No tienes inmuebles registrados</string>
+    <string name="label_direccion">Dirección</string>
+    <string name="label_precio">Precio</string>
+    <string name="label_ambientes">Ambientes</string>
+    <string name="label_tipo">Tipo</string>
+    <string name="label_uso">Uso</string>
+    <string name="estado_disponible">Disponible</string>
+    <string name="estado_no_disponible">No disponible</string>
+    <string name="estado_alquilado">Alquilado</string>
+
+    <!-- Tipos de inmueble -->
+    <string-array name="tipos_inmueble">
+        <item>Casa</item>
+        <item>Departamento</item>
+        <item>Local</item>
+        <item>Depósito</item>
+        <item>Oficina</item>
+        <item>Terreno</item>
+        <item>Cochera</item>
+    </string-array>
+
+    <!-- Usos de inmueble -->
+    <string-array name="usos_inmueble">
+        <item>Residencial</item>
+        <item>Comercial</item>
+        <item>Particular</item>
+    </string-array>
+
+    <!-- Fragment Detalle Inmueble -->
+    <string name="titulo_detalle_inmueble">Información del inmueble</string>
+    <string name="label_codigo_inmueble">Código</string>
+    <string name="btn_habilitar">Habilitar</string>
+    <string name="btn_deshabilitar">Deshabilitar</string>
+
+    <!-- Mensajes -->
+    <string name="inmueble_guardado">Inmueble guardado correctamente</string>
+    <string name="inmueble_actualizado">Inmueble actualizado correctamente</string>
+    <string name="inmueble_eliminado">Inmueble eliminado correctamente</string>
+    <string name="error_campos_incompletos">Por favor completa todos los campos obligatorios</string>
+    <string name="confirmacion_eliminar">¿Estás seguro de que deseas eliminar este inmueble?</string>
+    <string name="si_eliminar">Sí, eliminar</string>
+
+
+    <!-- Fragment Contratos -->
+    <string name="titulo_contratos">Contratos Vigentes</string>
+    <string name="sin_contratos">Sin contratos</string>
+    <string name="sin_contratos_mensaje">No tienes contratos vigentes</string>
+    <string name="titulo_detalle_contrato">Información del contrato</string>
+    <string name="label_codigo_contrato">Código contrato</string>
+    <string name="label_fecha_inicio">Fecha inicio</string>
+    <string name="label_fecha_fin">Fecha finalización</string>
+    <string name="label_monto_alquiler">Monto de alquiler</string>
+    <string name="label_inquilino">Inquilino</string>
+    <string name="label_inmueble">Inmueble</string>
+    <string name="btn_ver_pagos">VER PAGOS</string>
+
+    <!-- Fragment Pagos -->
+    <string name="titulo_pagos">Detalle de Pagos</string>
+    <string name="label_codigo_pago">Código pago</string>
+    <string name="label_numero_pago">Número de pago</string>
+    <string name="label_importe">Importe</string>
+    <string name="label_fecha_pago">Fecha de pago</string>
+    <string name="cambiar_contrase_a">CAMBIAR CONTRASEÑA</string>
 </resources>

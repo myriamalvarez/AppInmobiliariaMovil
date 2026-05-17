@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.myrsoft.appinmobiliariamovil.databinding.ActivityMainBinding;
@@ -32,6 +33,11 @@ private MainActivityViewModel vm;
 
             }
         });
-
+        vm.getMensajeMutable().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                binding.tvMensaje.setText(s);
+            }
+        });
     }
 }

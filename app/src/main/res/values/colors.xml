@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+<!-- Colores principales de la app -->
+<color name="primary_purple">#C97AE8</color>
+<color name="primary_purple_dark">#B95DDE</color>
+<color name="primary_purple_light">#E8D4F3</color>
+<color name="primary_purple_accent">#C06AE6</color>
+
+<!-- Colores para gradientes -->
+<color name="gradient_start">#C97AE8</color>
+<color name="gradient_end">#9B5FC9</color>
+
+<!-- Colores para el menú lateral -->
+<color name="nav_drawer_bg">#4A5C6A</color>
+<color name="nav_drawer_selected">#E8D4F3</color>
+
+<!-- Colores para textos -->
+<color name="text_primary">#000000</color>
+<color name="text_secondary">#666666</color>
+<color name="text_hint">#7D3FA0</color>
+<color name="text_white">#FFFFFF</color>
+
+<!-- Colores para fondos -->
+<color name="background_white">#FFFFFF</color>
+<color name="background_light_gray">#F5F5F5</color>
+<color name="background_cyan">#80CBC4</color>
+<color name="background_teal">#4DB6AC</color>
+
+<!-- Colores para cards de inmuebles -->
+<color name="card_background">#80CBC4</color>
+<color name="card_border">#4DB6AC</color>
+
+<!-- Colores para estados -->
+<color name="disponible">#4CAF50</color>
+<color name="no_disponible">#F44336</color>
+<color name="alquilado">#FF9800</color>
+
+<!-- Colores para botones -->
+<color name="button_primary">#B95DDE</color>
+<color name="button_secondary">#4DB6AC</color>
+<color name="button_disabled">#CCCCCC</color>
+
+<!-- Colores adicionales -->
+<color name="divider">#E0E0E0</color>
+<color name="shadow">#33000000</color>
+
+<!-- Colores para el header del perfil -->
+<color name="profile_header_start">#00BCD4</color>
+<color name="profile_header_end">#009688</color>
 </resources>

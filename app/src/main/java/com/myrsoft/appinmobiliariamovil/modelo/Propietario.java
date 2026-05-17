@@ -8,19 +8,19 @@ public class Propietario implements Serializable {
     private String apellido;
     private String dni;
     private String telefono;
-    private String mail;
+    private String email;
     private String clave;
 
     public Propietario() {
     }
 
-    public Propietario(int idPropietario, String nombre, String apellido, String dni, String telefono, String mail, String clave) {
+    public Propietario(int idPropietario, String nombre, String apellido, String dni, String telefono, String email, String clave) {
         this.idPropietario = idPropietario;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
         this.telefono = telefono;
-        this.mail = mail;
+        this.email = email;
         this.clave = clave;
     }
 
@@ -64,12 +64,12 @@ public class Propietario implements Serializable {
         this.telefono = telefono;
     }
 
-    public String getMail() {
-        return mail;
+    public String getEmail() {
+        return email;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setEmail(String mail) {
+        this.email = email;
     }
 
     public String getClave() {

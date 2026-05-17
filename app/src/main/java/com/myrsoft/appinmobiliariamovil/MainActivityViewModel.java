@@ -32,6 +32,15 @@ public class MainActivityViewModel extends AndroidViewModel {
     public void recuperarDatos(String email, String password){
         if(email.isEmpty() || password.isEmpty()){
             mensajeMutable.setValue("Por favor complete los campos");
+            return;
+        }
+        if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            mensajeMutable.setValue("Por favor ingrese un email válido");
+            return;
+        }
+        if (password.length() < 6) {
+            mensajeMutable.setValue("La contraseña debe tener al menos 6 caracteres");
+
         }else {
         //implementar interface
         ApiClient.MiServicioInmobiliaria servicio =  ApiClient.getServicio();
@@ -48,6 +57,7 @@ public class MainActivityViewModel extends AndroidViewModel {
                     context.startActivity(intent);
 
                 }else{
+                    mensajeMutable.setValue("usuario y/o contraseña incorrecto");
                     Log.d("Error", response.message()); //mensaje de error que devuelve
                     Log.d("Error", response.code()+""); // muestra codigo del error
                     Log.d("Error", response.errorBody().toString()+""); //trae mensaje y codigo de eroror

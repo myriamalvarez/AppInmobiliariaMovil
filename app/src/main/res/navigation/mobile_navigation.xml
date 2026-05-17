@@ -15,12 +15,20 @@
         android:id="@+id/nav_perfil"
         android:name="com.myrsoft.appinmobiliariamovil.ui.perfil.PerfilFragment"
         android:label="@string/menu_perfil"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_nav_perfil_to_cambiarClaveFragment"
+            app:destination="@id/cambiarClaveFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_inmuebles"
         android:name="com.myrsoft.appinmobiliariamovil.ui.inmuebles.InmueblesFragment"
         android:label="@string/menu_inmuebles"
-        tools:layout="@layout/fragment_inmuebles" />
+        tools:layout="@layout/fragment_inmuebles" >
+        <action
+            android:id="@+id/action_nav_inmuebles_to_detalleInmuebleFragment"
+            app:destination="@id/detalleInmuebleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_inquilinos"
         android:name="com.myrsoft.appinmobiliariamovil.ui.inquilinos.InquilinosFragment"
@@ -29,7 +37,7 @@
     <fragment
         android:id="@+id/nav_contratos"
         android:name="com.myrsoft.appinmobiliariamovil.ui.contratos.ContratosFragment"
-        android:label="@string/menu_salir"
+        android:label="@string/menu_contratos"
         tools:layout="@layout/fragment_salir" />
 
     <fragment
@@ -37,4 +45,22 @@
         android:name="com.myrsoft.appinmobiliariamovil.ui.salir.SalirFragment"
         android:label="@string/menu_salir"
         tools:layout="@layout/fragment_salir" />
+    <fragment
+        android:id="@+id/cambiarClaveFragment"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.perfil.CambiarClaveFragment"
+        android:label="Cambiar contraseña"
+        tools:layout="@layout/fragment_cambiar_clave" >
+        <action
+            android:id="@+id/action_cambiarClaveFragment_to_nav_perfil"
+            app:destination="@id/nav_perfil" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleInmuebleFragment"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.inmuebles.DetalleInmuebleFragment"
+        android:label="fragment_detalle_inmueble"
+        tools:layout="@layout/fragment_detalle_inmueble" >
+        <action
+            android:id="@+id/action_detalleInmuebleFragment_to_nav_inmuebles"
+            app:destination="@id/nav_inmuebles" />
+    </fragment>
 </navigation>

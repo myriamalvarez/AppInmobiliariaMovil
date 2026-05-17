@@ -48,6 +48,8 @@ dependencies {
     implementation(libs.adapter.guava)
     implementation(libs.converter.gson)
     implementation(libs.circleimageview)
+    implementation(libs.android.sdk)
+    implementation(libs.glide)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
