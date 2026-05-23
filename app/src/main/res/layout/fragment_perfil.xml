@@ -34,7 +34,7 @@
             android:id="@+id/ivFoto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/img_perfil"
+            android:src="@drawable/img_profe"
             android:scaleType="centerCrop"
             android:contentDescription="@string/foto_perfil"/>
     </androidx.cardview.widget.CardView>

@@ -21,6 +21,10 @@ import retrofit2.Response;
 
 public class InmueblesViewModel extends AndroidViewModel {
     private MutableLiveData<List<Inmueble>> listaMutable = new MutableLiveData<>();
+    private MutableLiveData<String> mensajeMutable = new MutableLiveData<>();
+    private MutableLiveData<Boolean> cargandoMutable = new MutableLiveData<>();
+
+
     public InmueblesViewModel(@NonNull Application application) {
         super(application);
     }
@@ -29,24 +33,54 @@ public class InmueblesViewModel extends AndroidViewModel {
         return listaMutable;
     }
 
+    public LiveData<String> getMensajeMutable(){
+        if(mensajeMutable == null){
+            mensajeMutable = new MutableLiveData<>();
+        }
+        return mensajeMutable;
+    }
+
+    public LiveData<Boolean> getCargandoMutable(){
+        if(cargandoMutable == null){
+            cargandoMutable = new MutableLiveData<>();
+        }
+        return cargandoMutable;
+    }
+
     public void obtenerInmuebles(){
+        cargandoMutable.setValue(true);
         String token = ApiClient.leerToken(getApplication());
+
+        if(token == null){
+            mensajeMutable.setValue("Debe iniciar sesión para ver los inmuebles");
+            cargandoMutable.setValue(false);
+            return;
+        }
+
         ApiClient.MiServicioInmobiliaria servicio = ApiClient.getServicio();
         Call<List<Inmueble>> call = servicio.listarInmuebles(token);
         call.enqueue(new Callback<List<Inmueble>>() {
             @Override
             public void onResponse(Call<List<Inmueble>> call, Response<List<Inmueble>> response) {
-                if (response.isSuccessful()) {
+                cargandoMutable.setValue(false);
+                if (response.isSuccessful() && response.body() != null) {
                     listaMutable.postValue(response.body());
+                    if (response.body().isEmpty()) {
+                        mensajeMutable.setValue("No hay inmuebles para listar");
+                    }
                 }else {
-                    Toast.makeText(getApplication(), "No hay inmuebles para listar", Toast.LENGTH_SHORT).show();
-                    Log.d("Error", response.message());
+                    if(response.code() == 401){
+                        mensajeMutable.setValue("Sesión expirada. Inicie sesión nuevamente");
+                    }else{
+                        mensajeMutable.setValue("Error al cargar inmuebles: " + response.message());
+                    }
                 }
             }
 
             @Override
             public void onFailure(Call<List<Inmueble>> call, Throwable t) {
-                Toast.makeText(getApplication(), "No se puede acceder a la API", Toast.LENGTH_SHORT).show();
+                cargandoMutable.setValue(false);
+                mensajeMutable.setValue("Error de conexión: " + t.getMessage());
                 Log.d("Error", t.getMessage());
             }
         });

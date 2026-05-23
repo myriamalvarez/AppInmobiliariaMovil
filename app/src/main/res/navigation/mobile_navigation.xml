@@ -28,17 +28,28 @@
         <action
             android:id="@+id/action_nav_inmuebles_to_detalleInmuebleFragment"
             app:destination="@id/detalleInmuebleFragment" />
+        <action
+            android:id="@+id/action_nav_inmuebles_to_agregarInmuebleFragment"
+            app:destination="@id/agregarInmuebleFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_inquilinos"
         android:name="com.myrsoft.appinmobiliariamovil.ui.inquilinos.InquilinosFragment"
         android:label="@string/menu_inquilinos"
-        tools:layout="@layout/fragment_inquilinos" />
+        tools:layout="@layout/fragment_inquilinos" >
+        <action
+            android:id="@+id/action_nav_inquilinos_to_detalleInquilinoFragment"
+            app:destination="@id/detalleInquilinoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_contratos"
         android:name="com.myrsoft.appinmobiliariamovil.ui.contratos.ContratosFragment"
         android:label="@string/menu_contratos"
-        tools:layout="@layout/fragment_salir" />
+        tools:layout="@layout/fragment_salir" >
+        <action
+            android:id="@+id/action_nav_contratos_to_detalleContratoFragment"
+            app:destination="@id/detalleContratoFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_salir"
@@ -57,10 +68,51 @@
     <fragment
         android:id="@+id/detalleInmuebleFragment"
         android:name="com.myrsoft.appinmobiliariamovil.ui.inmuebles.DetalleInmuebleFragment"
-        android:label="fragment_detalle_inmueble"
+        android:label="Detalle del inmueble"
         tools:layout="@layout/fragment_detalle_inmueble" >
         <action
             android:id="@+id/action_detalleInmuebleFragment_to_nav_inmuebles"
             app:destination="@id/nav_inmuebles" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarInmuebleFragment"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.inmuebles.AgregarInmuebleFragment"
+        android:label="Agregar inmueble"
+        tools:layout="@layout/fragment_agregar_inmueble" >
+        <action
+            android:id="@+id/action_agregarInmuebleFragment_to_nav_inmuebles"
+            app:destination="@id/nav_inmuebles" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.myrsoft.appinmobiliariamovil.MainActivity"
+        android:label="login"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/detalleContratoFragment"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.contratos.DetalleContratoFragment"
+        android:label="Detalle del contrato"
+        tools:layout="@layout/fragment_detalle_contrato" >
+        <action
+            android:id="@+id/action_detalleContratoFragment_to_pagosFragment"
+            app:destination="@id/pagosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleInquilinoFragment"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.inquilinos.DetalleInquilinoFragment"
+        android:label="Detalle del inquilino"
+        tools:layout="@layout/fragment_detalle_inquilino" >
+        <action
+            android:id="@+id/action_detalleInquilinoFragment_to_nav_inquilinos"
+            app:destination="@id/nav_inquilinos" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagosFragment"
+        android:name="com.myrsoft.appinmobiliariamovil.ui.pagos.PagosFragment"
+        android:label="Pagos"
+        tools:layout="@layout/fragment_pagos" >
+        <action
+            android:id="@+id/action_pagosFragment_to_detalleContratoFragment"
+            app:destination="@id/detalleContratoFragment" />
     </fragment>
 </navigation>

@@ -26,6 +26,12 @@
 <color name="background_cyan">#80CBC4</color>
 <color name="background_teal">#4DB6AC</color>
 
+    <!-- Mensajes -->
+    <color name="mensaje_exito">#4CAF50</color>    <!-- Verde -->
+    <color name="mensaje_error">#F44336</color>      <!-- Rojo -->
+    <color name="mensaje_warning">#FF9800</color>    <!-- Naranja -->
+    <color name="mensaje_info">#2196F3</color>       <!-- Azul -->
+
 <!-- Colores para cards de inmuebles -->
 <color name="card_background">#80CBC4</color>
 <color name="card_border">#4DB6AC</color>
