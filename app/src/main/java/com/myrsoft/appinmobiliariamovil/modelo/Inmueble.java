@@ -13,6 +13,7 @@ public class Inmueble implements Serializable {
     private double valor;
     private String imagen;
     private boolean disponible;
+    private boolean tieneContratoVigente;
     private int idPropietario;
     private Propietario propietario;
     private Inquilino inquilino;
@@ -116,6 +117,13 @@ public class Inmueble implements Serializable {
         this.disponible = disponible;
     }
 
+    public boolean isTieneContratoVigente() {
+        return tieneContratoVigente;
+    }
+
+    public void setTieneContratoVigente(boolean tieneContratoVigente) {
+        this.tieneContratoVigente = tieneContratoVigente;
+    }
 
     public int getIdPropietario() {
         return idPropietario;

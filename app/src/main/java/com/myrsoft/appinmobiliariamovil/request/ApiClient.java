@@ -75,10 +75,10 @@ public class ApiClient {
         Call<List<Inmueble>> getInmueblesConContratoVigente(@Header("Authorization") String token);
 
         @GET("api/contratos/inmueble/{id}")
-        Call<Contrato> getContratoPorInmueble(@Header("Authorization") String token, @retrofit2.http.Path("id") int idInmueble);
+        Call<Contrato> getContratoPorInmueble(@Header("Authorization") String token, @Path("id") int idInmueble);
 
         @GET("api/pagos/contrato/{id}")
-        Call<List<Pago>> getPagosPorContrato(@Header("Authorization") String token, @retrofit2.http.Path("id") int idContrato);
+        Call<List<Pago>> getPagosPorContrato(@Header("Authorization") String token, @Path("id") int idContrato);
 
     }
     public static void guardarToken(Context context, String token) {

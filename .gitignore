@@ -13,3 +13,7 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Ignorar archivos de build y dependencias del JDK
+jdk-17/
+openjdk-17_linux-x64_bin.tar.gz
+

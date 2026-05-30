@@ -49,6 +49,7 @@
 <!-- Colores adicionales -->
 <color name="divider">#E0E0E0</color>
 <color name="shadow">#33000000</color>
+<color name="gray_light">#D3D3D3</color>
 
 <!-- Colores para el header del perfil -->
 <color name="profile_header_start">#00BCD4</color>

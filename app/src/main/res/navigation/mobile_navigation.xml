@@ -109,7 +109,7 @@
     <fragment
         android:id="@+id/pagosFragment"
         android:name="com.myrsoft.appinmobiliariamovil.ui.pagos.PagosFragment"
-        android:label="Pagos"
+        android:label="Historial de pagos"
         tools:layout="@layout/fragment_pagos" >
         <action
             android:id="@+id/action_pagosFragment_to_detalleContratoFragment"
